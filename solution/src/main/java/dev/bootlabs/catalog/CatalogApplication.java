@@ -4,9 +4,7 @@ import dev.bootlabs.catalog.config.CatalogProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cache.annotation.EnableCaching;
 
-@EnableCaching
 @EnableConfigurationProperties(CatalogProperties.class)
 @SpringBootApplication
 public class CatalogApplication {
