@@ -20,7 +20,14 @@ class BookApiContractTest {
 
     @Test void consumerContractForCreateBook() throws Exception {
         mvc.perform(post("/api/v1/books").contentType(MediaType.APPLICATION_JSON)
-                .content("""{"isbn":"9781617297571","title":"Spring in Action","author":"Craig Walls","price":54.99}"""))
+                .content("""
+                        {
+                          "isbn": "9781617297571",
+                          "title": "Spring in Action",
+                          "author": "Craig Walls",
+                          "price": 54.99
+                        }
+                        """))
                 .andExpect(status().isCreated())
                 .andExpect(header().string("Location", startsWith("/api/v1/books/")))
                 .andExpect(jsonPath("$.id").isNumber())
