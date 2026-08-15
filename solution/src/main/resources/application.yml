@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: book-catalog
+  datasource:
+    url: jdbc:h2:mem:catalog;MODE=MySQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  h2:
+    console:
+      enabled: true
+  cache:
+    type: caffeine
+catalog:
+  default-page-size: 20
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,caches
+  endpoint:
+    health:
+      show-details: always
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
