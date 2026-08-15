@@ -1,0 +1,8 @@
+create table books (
+  id bigint auto_increment primary key,
+  isbn varchar(20) not null unique,
+  title varchar(255) not null,
+  author varchar(255) not null,
+  price decimal(10,2) not null,
+  version bigint not null default 0
+);

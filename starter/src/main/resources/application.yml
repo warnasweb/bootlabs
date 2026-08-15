@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: catalog-starter
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+info:
+  application:
+    description: Spring Boot E2 starter

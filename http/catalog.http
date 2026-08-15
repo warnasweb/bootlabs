@@ -1,0 +1,33 @@
+### Health
+GET http://localhost:8080/actuator/health
+
+### Create
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+
+{
+  "isbn": "9781617297571",
+  "title": "Spring in Action",
+  "author": "Craig Walls",
+  "price": 54.99
+}
+
+### List
+GET http://localhost:8080/api/v1/books
+
+### Read (replace ID when needed)
+GET http://localhost:8080/api/v1/books/1
+
+### Update
+PUT http://localhost:8080/api/v1/books/1
+Content-Type: application/json
+
+{
+  "isbn": "9781617297571",
+  "title": "Spring in Action — Revised",
+  "author": "Craig Walls",
+  "price": 59.99
+}
+
+### Delete
+DELETE http://localhost:8080/api/v1/books/1

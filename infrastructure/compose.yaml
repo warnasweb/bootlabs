@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: bootlabs
+      MYSQL_USER: bootlabs
+      MYSQL_PASSWORD: bootlabs
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - bootlabs-mysql:/var/lib/mysql
+volumes:
+  bootlabs-mysql:
