@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/bootlabs}
+    username: ${DB_USERNAME:bootlabs}
+    password: ${DB_PASSWORD:bootlabs}
+  h2:
+    console:
+      enabled: false
