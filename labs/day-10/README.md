@@ -14,7 +14,7 @@
 
 1. Start the application on a random port.
 2. Create, read, update, list, and delete a book over real HTTP.
-3. Run the flow against MySQL/Testcontainers when Docker is available.
+3. Run the flow against PostgreSQL/Testcontainers when Docker is available.
 4. Capture logs, status codes, database state, cache behavior, and Actuator health.
 5. Add one negative workflow: duplicate ISBN or invalid price.
 

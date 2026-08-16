@@ -22,7 +22,7 @@ Enable annotation processing only if an added library requires it; the supplied 
 - Port conflict: run with `--server.port=8081` or stop the process using 8080.
 - Stale dependencies: use Maven reload before deleting caches.
 - Docker unavailable: complete H2 work and return to container-specific extensions later.
-- MySQL does not become healthy: inspect `docker compose -f infrastructure/compose.yaml logs mysql`.
+- PostgreSQL does not become healthy: inspect `docker compose -f infrastructure/compose.yaml logs postgres`.
 
 ## Useful endpoints
 

@@ -1,19 +1,18 @@
 services:
-  mysql:
-    image: mysql:8.4
+  postgres:
+    image: postgres:18-alpine
     environment:
-      MYSQL_DATABASE: bootlabs
-      MYSQL_USER: bootlabs
-      MYSQL_PASSWORD: bootlabs
-      MYSQL_ROOT_PASSWORD: root
+      POSTGRES_DB: bootlabs
+      POSTGRES_USER: bootlabs
+      POSTGRES_PASSWORD: bootlabs
     ports:
-      - "3306:3306"
+      - "5432:5432"
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      test: ["CMD-SHELL", "pg_isready -U bootlabs -d bootlabs"]
       interval: 5s
       timeout: 3s
       retries: 20
     volumes:
-      - bootlabs-mysql:/var/lib/mysql
+      - bootlabs-postgres:/var/lib/postgresql
 volumes:
-  bootlabs-mysql:
+  bootlabs-postgres:

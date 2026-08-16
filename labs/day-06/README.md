@@ -1,17 +1,17 @@
-# Day 6 — MySQL and Production-Grade Persistence
+# Day 6 — PostgreSQL and Production-Grade Persistence
 
-**Outcome:** Run the same application against MySQL and reason about portability, connection pools, migrations, indexes, and operational failure.
+**Outcome:** Run the same application against PostgreSQL and reason about portability, connection pools, migrations, indexes, and operational failure.
 
 ## Lab
 
-1. Start MySQL: `docker compose -f infrastructure/compose.yaml up -d`.
-2. Run the solution with `--spring.profiles.active=mysql`.
+1. Start PostgreSQL: `docker compose -f infrastructure/compose.yaml up -d`.
+2. Run the solution with `--spring.profiles.active=postgres`.
 3. Override credentials using `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD`.
 4. Verify Flyway history and inspect the books table and index.
-5. Compare H2 and MySQL identity, reserved words, collation, decimals, and transaction behavior.
+5. Compare H2 and PostgreSQL identity, reserved words, collation, decimals, and transaction behavior.
 6. Add a composite index justified by a real query; capture its execution plan before and after.
 7. Set a small Hikari pool and observe metrics under controlled concurrency.
-8. Stop MySQL during a request and document symptoms, recovery, and safe client behavior.
+8. Stop PostgreSQL during a request and document symptoms, recovery, and safe client behavior.
 
 ## Extension
 
