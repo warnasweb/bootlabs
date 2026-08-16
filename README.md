@@ -7,7 +7,7 @@ A two-week, instructor-led lab series for experienced Java developers. The cours
 - Java 21
 - Spring Boot 4.1.0 / Spring Framework 7
 - Maven 3.6.3+
-- H2 for fast local labs; MySQL 8.4 for production-like persistence
+- H2 for fast local labs; PostgreSQL 18 for production-like persistence
 - JUnit 5, Mockito, MockMvc, Testcontainers, Awaitility
 - springdoc-openapi for Swagger UI
 
@@ -20,7 +20,7 @@ Spring Boot 4.1 requires Java 17 or newer and supports Java 21. See the [officia
 | `labs/day-01` … `labs/day-10` | Facilitated lab sheets, checkpoints, extensions, and review questions |
 | `starter` | Compilable starting point used on Day 1 |
 | `solution` | Complete reference implementation accumulated across all labs |
-| `infrastructure` | MySQL container setup |
+| `infrastructure` | PostgreSQL container setup |
 | `.github/workflows` | Java 21 build and test automation |
 
 ## Two-week journey
@@ -32,7 +32,7 @@ Spring Boot 4.1 requires Java 17 or newer and supports Java 21. See the [officia
 | 3 | Configuration and annotations | Validated, profile-aware configuration |
 | 4 | H2, JPA, transactions | Persistent catalog with migration |
 | 5 | REST API and error design | Versioned CRUD API |
-| 6 | MySQL and persistence engineering | Container-backed database profile |
+| 6 | PostgreSQL and persistence engineering | Container-backed database profile |
 | 7 | AOP and observability | Timed application service |
 | 8 | Caching and OpenAPI | Cache policy and interactive API docs |
 | 9 | Unit, slice, and integration testing | Layered automated test suite |
